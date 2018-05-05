@@ -1,0 +1,49 @@
+<html>
+<!--
+■    ■                                                                  
+ ■   ■■■■■   ■  ■■■■       ■       ■■■■■      ■    ■■■                    
+■■■■   ■     ■  ■ ■    ■■■■■■■■       ■       ■    ■                     ■
+ ■■   ■■■  ■■■■■■■■■■       ■        ■       ■■■■■■■■■                  ■■
+■■ ■■       ■■  ■ ■      ■■■■       ■■■■■     ■    ■                   ■■ 
+ ■■ ■  ■■   ■ ■ ■■ ■■   ■■  ■      ■■    ■    ■    ■     ■■■■■■■       ■  
+ ■■  ■   ■  ■ ■  ■■■■   ■■  ■■     ■     ■    ■   ■■                  ■   
+ ■■ ■■   ■  ■ ■ ■■■■■    ■■■ ■      ■■ ■■■    ■                           
+ ■■ ■■   ■   ■  ■   ■       ■       ■   ■■    ■■    ■               ■■    
+  ■  ■■■■■  ■■■ ■■■■■    ■■■■        ■■■■      ■■■■■                      
+-->
+    <head>
+        <title>写真送ってください！</title>
+        <script src="build/index.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css"> -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    </head>
+    <body>
+        <div id="list">
+        </div>
+        <label for="files" class="upfile empty">
+            <div class="addButton"><i class="fas fa-camera"></i></div>
+            <div class="explain">写真を追加してください</div>
+            <input type="file" name="upfile" id="files" accept="image/*"/>
+        </label>
+        <label for="submit" class="submit" >
+            <i class="fas fa-share-square"></i> 計<span id="photoCount">0</span>枚の写真を送信する
+            <input id="submit" type="submit" name="save" value="保存"/>
+        </label>
+        <div id="messagePanel">
+            <div class="uploading show">
+                <div><i class="fas fa-spinner fa-pulse"></i></div>
+                <div>写真を送信しています</div>
+            </div>
+            <div class="thank">
+                <div><i class="far fa-check-square"></i></div>
+                <div>写真を受け取りました！<br/>ありがとうございました！</div>
+            </div>
+            <div class="error">
+                <div><i class="fas fa-exclamation-triangle"></i></div>
+                <div>送信に失敗しました</div>
+            </div>
+        </div>
+    </body>
+</html>

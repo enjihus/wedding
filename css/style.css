@@ -1,0 +1,143 @@
+@charset "utf-8";
+@font-face{
+    font-family: "うずらフォント";
+    src:url("./uzura.ttf") format("truetype");
+}
+
+body{
+    position: relative;
+    margin:0;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    background-color: #333;
+    font-family: 'うずらフォント';
+}
+
+.hidden{
+    display: none;
+}
+
+.upfile{
+    width: 100%;
+}
+.upfile .addButton{
+    width: 96%;
+    margin: 10px 2% 5px;
+    color: #EEE;
+    font-size: 50px;
+    text-align: center;
+    line-height: 60px;
+}
+.upfile.empty{
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.upfile .border{
+    border: solid 1px #EEE;
+    margin: 10px 2% 75px !important;
+    padding: 10px 0px;
+    background-color: rgba(255,255,255,0.1);
+}
+.upfile .explain{
+    color: #EEE;
+    padding-top: 30px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+.upfile input{
+    display: none;
+}
+.submit{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    bottom: -60px;
+    left: 0px;
+    background-color: #ffbbbb;
+    color: #808080;
+    text-align: center;
+    line-height: 60px;
+    transition: .3s;
+}
+.submit input{
+    display: none;
+}
+.submit.show{
+    transform: translateY(-60px);
+}
+#list{
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.thumb{
+    position: relative;
+    width: 96%;
+    padding: 10px 2% 5px;
+    transition: all 0.5s;
+    opacity: 0;
+}
+.thumb img{
+    width: 100%;
+}
+.thumb.show{
+    opacity: 1;
+}
+
+.removePhoto{
+    position: absolute;
+    margin: 20px 15px;
+    top: 3px;
+    right: 3px;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    line-height: 31px;
+    font-size: 30px;
+    color: rgba(0,0,0,0.3);
+}
+
+#messagePanel{
+    position: fixed;
+    top: 100%;
+    left:0;
+    width: 100%;
+    height:100%;
+    background-color: #FFFFFF;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    z-index: 1000000;
+}
+#messagePanel.show{
+    transform: translateY(-100%);
+}
+#messagePanel > div{
+    display: none;
+}
+#messagePanel > div.show{
+    display: block;
+    animation: show 1s linear 0s;
+}
+#messagePanel > div div:first-child{
+    width: 96%;
+    margin: 10px 2% 5px;
+    color: #333;
+    font-size: 50px;
+    text-align: center;
+    line-height: 60px;
+}
+#messagePanel > div div:last-child{
+    color: #333;
+    padding-top: 30px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 20px;
+}
